@@ -1,5 +1,3 @@
-
-
 export default class Todo{
     constructor(title, description, dueDate, priority){
         this.title = title;
@@ -8,7 +6,8 @@ export default class Todo{
         this.priority = priority;
     }
     format(){
-        console.log(this.title, this.description, this.dueDate,
+        createTodoEntry();
+        fillToDoEntry(this.title, this.description, this.dueDate,
             this.priority);
     }
 }
@@ -19,14 +18,22 @@ function createTodoEntry(){
     const entryCreation = document.createElement('div');
     entryCreation.classList.add('todoContainer');
     entryCreation.innerHTML=`
-        <p class = "todoTitle">Title</p>
-        <p class = "todoPriority">Priority</p>
-        <p class = "todoDueDate">September 14, 2024</p>
-        <p class = "todoDescription">aoisdjfoiajsdfoija
-            oaidsjfoiasdjfoiasdjfoiasjdfi</p>`
-
+        <p class = "todoTitle"></p>
+        <p class = "todoPriority"></p>
+        <p class = "todoDueDate"></p>
+        <p class = "todoDescription"></p>`
     mainDiv.appendChild(entryCreation);
-
 }
 
-createTodoEntry();
+function fillToDoEntry(title, description, dueDate, priority){
+    const titleEntry = document.querySelector('.todoTitle');
+    titleEntry.textContent = title;
+    const priorityEntry = document.querySelector('.todoPriority');
+    priorityEntry.textContent = priority;
+    const dateEntry = document.querySelector('.todoDueDate');
+    dateEntry.textContent = dueDate;
+    const descriptionEntry = document.querySelector('.todoDescription');
+    descriptionEntry.textContent = description;
+}
+
+

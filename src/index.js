@@ -9,10 +9,7 @@ entry1.format();
 
 
 /*
-1. Dynamically create 'todos' be either using factories or
-    constructors/classes
-2. Properties: title, description, dueDate, priority.
-    Might want to add notes and checklist
+
 3. todo list should have 'projects' or separate lists of todos. 
     When user first opens app, should see 'default' project to which all of todos are put. Users should be able to create new projects and choose which project their todos go into
 4. Separate application logic from DOM related content - Keep in 

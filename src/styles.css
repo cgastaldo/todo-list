@@ -36,3 +36,48 @@
     grid-column: 1/4;
     margin-left: 5px;
 }
+
+body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#header, #sidebar{
+    border: 1px solid black;
+    
+}
+
+#header ul{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;   
+}
+
+#sidebar ul, li{
+
+}
+
+#header{
+    grid-area: 1/1/2/5;
+    display:grid;
+    grid-template-columns: 2fr 3fr;
+
+}
+
+#header nav{
+    display: grid3;
+    justify-items: space-evenly;
+    align-items: center;
+
+}
+
+#sidebar{
+    grid-area: 2/1/5/2;
+}
+
+.profileImage{
+    width: 50px;
+}
+
