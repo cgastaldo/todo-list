@@ -1,3 +1,6 @@
+import logoImage from "./Images/logo.png";
+import avatarImage from "./Images/hal.jpg";
+
 export default function createLayout(){
     createLogo();
     createHeader();
@@ -6,18 +9,19 @@ export default function createLayout(){
 
 function createLogo(){
     const logo = document.createElement('div');
-    logo.id.add('companyLogo');
-    logo.innerHTML = `
-        <img src="./Images/logo.png">`
+    logo.setAttribute('id', 'companyLogo');
+    const logoImg = document.createElement('img');
+    logoImg.src = logoImage;
+    logo.appendChild(logoImg);
+    document.body.append(logo);
 }
 
 function createHeader(){
     const header = document.createElement('header');
-    header.id.add('header'); //may have problems here
+    header.setAttribute('id', 'header'); 
     header.innerHTML = `
         <div class = "profileWelcome">
             <p>Welcome back, Dave.</p>
-            <img src="./Images/hal.jpg" class="profileImage">
         </div>
         <nav>
             <ul class="navList">
@@ -27,11 +31,16 @@ function createHeader(){
                 <li>Logout</li>
             </ul>
         </nav>`
+    const avatarImg = document.createElement('img');
+    avatarImg.src = avatarImage;
+    document.body.append(header);
+    const welcome = document.querySelector('.profileWelcome');
+    welcome.appendChild(avatarImg);
 }
 
 function createSidebar(){
     const sidebar = document.createElement('aside');
-    sidebar.id.add('sidebar');
+    sidebar.setAttribute('id', 'sidebar');
     sidebar.innerHTML = `
     <div class="sidebarTitle">
         <p>Todo Projects</p>
@@ -44,53 +53,5 @@ function createSidebar(){
         </ul>
     </div>
     <button>Create New Project</button>`
+    document.body.append(sidebar);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    <div id="companyLogo">
-        <img src="./Images/logo.png">
-    </div>
-    <header id = "header">
-        <div class = "profileWelcome">
-            <p>Welcome back, Dave.</p>
-            <img src="./Images/hal.jpg" class="profileImage">
-        </div>
-        <nav>
-            <ul class="navList">
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Settings</li>
-                <li>Logout</li>
-            </ul>
-        </nav>
-    </header>
-
-        <aside id="sidebar">
-        <div class="sidebarTitle">
-            <p>Todo Projects</p>
-        </div>
-        <div class="sidebarLinks">
-            <ul class = "sidebarList"> 
-                <li>Unique Project Name 1</li>
-                <li>Unique Project Name 2</li>
-                <li>Unique Project Name 3</li>
-            </ul>
-            
-        </div>
-        <button>Create New Project</button>
-    </aside>
-*/
