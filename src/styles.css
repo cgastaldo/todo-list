@@ -55,15 +55,45 @@ body{
     gap: 20px;   
 }
 
-#sidebar ul, li{
+#header li, #sidebar li{
+    display:flex;
+    padding-top:10px;
+    padding-bottom:10px;
+    text-align: center;
+}
 
+#sidebar ul{
+    padding-left:0;
+}
+
+#sidebar{
+    display:grid;
+    justify-items:center;
+    align-items:start;
+    height: 50vh;
+}
+
+#sidebar div{
+    display:grid;
+    justify-items:center;
+    gap: 30px;
+}
+
+#companyLogo{
+    grid-area:1/1/2/2;
+    display: grid;
+    justify-items:center;
+    align-content:center;
+}
+
+#companyLogo img{
+    width:120px;
 }
 
 #header{
-    grid-area: 1/1/2/5;
+    grid-area: 1/2/2/5;
     display:grid;
     grid-template-columns: 2fr 3fr;
-
 }
 
 #header nav{
