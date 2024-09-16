@@ -135,5 +135,9 @@ body{
 }
 
 #sidebar button{
-
+    padding: 15px;
+    background-color: white;
+    border:none;
+    border-radius: 8%;
+    color: black;
 }
