@@ -54,6 +54,7 @@ body{
     grid-template-columns: 2fr 3fr;
     background-color: #0077b6;
     color: #ffffff;
+    height: 100px;
 }
 
 #header nav{
@@ -132,6 +133,7 @@ body{
     display: grid;
     justify-items:center;
     align-content:center;
+    height: 100px;
 }
 
 #companyLogo img{

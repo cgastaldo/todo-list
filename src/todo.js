@@ -6,13 +6,44 @@ export default class Todo{
         this.priority = priority;
     }
     format(){
-        createTodoEntry();
-        fillToDoEntry(this.title, this.description, this.dueDate,
-            this.priority);
+        createTodoEntry2(this.title, this.description, this.dueDate,
+                this.priority);
+        //createTodoEntry();
+        //fillToDoEntry(this.title, this.description, this.dueDate,
+        //    this.priority);
     }
 }
 
 const mainDiv = document.querySelector("#content");
+
+
+
+function createTodoEntry2(title, description, dueDate, priority){
+    const card = document.createElement('div');
+    card.classList.add('todoContainer');
+    mainDiv.appendChild(card);
+    
+    const titleEntry = document.createElement('p');
+    titleEntry.classList.add = '.todoTitle';
+    titleEntry.textContent = title;
+    card.appendChild(titleEntry);
+
+    const priorityEntry = document.createElement('p');
+    priorityEntry.classList.add = '.todoPriority';
+    priorityEntry.textContent = priority;
+    card.appendChild(priorityEntry);
+
+    const dateEntry = document.createElement('p');
+    dateEntry.classList.add = '.todoDueDate';
+    dateEntry.textContent = dueDate;
+    card.appendChild(dateEntry);
+
+    const descriptionEntry = document.createElement('p');
+    descriptionEntry.classList.add = '.todoDescription';
+    descriptionEntry.textContent = description;
+    card.appendChild(descriptionEntry);
+}
+
 
 function createTodoEntry(){
     const entryCreation = document.createElement('div');
