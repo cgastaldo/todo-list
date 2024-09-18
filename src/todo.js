@@ -24,22 +24,22 @@ function createTodoEntry2(title, description, dueDate, priority){
     mainDiv.appendChild(card);
     
     const titleEntry = document.createElement('p');
-    titleEntry.classList.add = '.todoTitle';
+    titleEntry.setAttribute('class', 'todoTitle');
     titleEntry.textContent = title;
     card.appendChild(titleEntry);
 
     const priorityEntry = document.createElement('p');
-    priorityEntry.classList.add = '.todoPriority';
+    priorityEntry.setAttribute('class', 'todoPriority');
     priorityEntry.textContent = priority;
     card.appendChild(priorityEntry);
 
     const dateEntry = document.createElement('p');
-    dateEntry.classList.add = '.todoDueDate';
+    dateEntry.setAttribute('class', 'todoDueDate');
     dateEntry.textContent = dueDate;
     card.appendChild(dateEntry);
 
     const descriptionEntry = document.createElement('p');
-    descriptionEntry.classList.add = '.todoDescription';
+    descriptionEntry.setAttribute('class', 'todoDescription');
     descriptionEntry.textContent = description;
     card.appendChild(descriptionEntry);
 }
