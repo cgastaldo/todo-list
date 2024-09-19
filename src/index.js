@@ -1,12 +1,8 @@
 import "./styles.css";
-import Todo from "./todo.js";
 import createLayout from "./layout.js";
 import { returnProject } from "./project.js";
 
-
-
 createLayout();
-
 returnProject();
 
 

@@ -42,6 +42,17 @@ function createTodoEntry2(title, description, dueDate, priority){
     descriptionEntry.setAttribute('class', 'todoDescription');
     descriptionEntry.textContent = description;
     card.appendChild(descriptionEntry);
+
+    const editButton = document.createElement('button');
+    editButton.setAttribute('class', 'editBtn');
+    editButton.textContent = "Edit";
+    card.appendChild(editButton);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.setAttribute('class', 'deleteBtn');
+    deleteButton.textContent = "Delete";
+    card.appendChild(deleteButton);
+
 }
 
 
