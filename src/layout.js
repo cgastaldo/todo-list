@@ -5,6 +5,7 @@ export default function createLayout(){
     createLogo();
     createHeader();
     createSidebar();
+    createModal();
 }
 
 function createLogo(){
@@ -52,6 +53,32 @@ function createSidebar(){
             <li>Unique Project Name 3</li>
         </ul>
     </div>
-    <button>Create New Project</button>`
+    <button class="newEntry">Create New Entry</button>`
     document.body.append(sidebar);
+}
+
+
+function createModal(){
+    const modal = document.createElement('div');
+    modal.setAttribute('id', 'modalBox');
+    modal.innerHTML=`
+        <dialog>
+        <form>
+            <label for="formTitle">Title:</label>
+            <input type="text" id="formTitle" name="formTitle" maxlength="20" required><br>
+            <label for="formDate">Due Date:</label>
+            <input type="date" id="formDate" name="formDate" required><br>
+            <label for="formPriority">Priority:</label>
+            <select id="formPriority" name="formPriority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select><br>
+            <label for="formDescription">Description:</label>
+            <textarea type="text" id="formDescription" name="formDescription" maxlength="200"></textarea>
+        </form>
+        <button id="closeButton">Close</button>
+        <button id="submitButton">Submit</button>
+    </dialog>`
+    document.body.append(modal);
 }

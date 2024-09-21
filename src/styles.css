@@ -51,7 +51,6 @@
 
 .deleteBtn{
     grid-column: 3/4;
-
 }
 
 body{
@@ -65,7 +64,6 @@ body{
                         "sb cn cn cn"
                         "sb cn cn cn";
     gap: 3px;
-
 }
 
 #content{
@@ -177,4 +175,41 @@ body{
     border:none;
     border-radius: 8%;
     color: black;
+}
+
+
+#modalBox{
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog{
+    background-color: #0077b6;
+    width:350px;
+    height: 350px;
+}
+
+form{
+    display:grid;
+}
+
+textarea{
+    height: 100px;
+}
+
+dialog button{
+    padding: 10px;
+    background-color: white;
+    border:none;
+    border-radius: 8%;
+    color: black;
+    margin-top: 10px;
+    margin-right: 100px;
+}
+
+.modal-backdrop{
+    background-color: rgba(255,255,255, 0.5);
+    backdrop-filter:blur(10px);
 }

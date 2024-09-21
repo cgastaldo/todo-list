@@ -1,26 +1,23 @@
 export default class Todo{
     constructor(title, description, dueDate, priority){
+        this.id = Date.now().toString(36) + Math.random().toString(36);
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         this.priority = priority;
     }
     format(){
-        createTodoEntry2(this.title, this.description, this.dueDate,
-                this.priority);
-        //createTodoEntry();
-        //fillToDoEntry(this.title, this.description, this.dueDate,
-        //    this.priority);
+        createTodoEntry(this.title, this.description, this.dueDate,
+                this.priority, this.id);
     }
 }
 
 const mainDiv = document.querySelector("#content");
 
-
-
-function createTodoEntry2(title, description, dueDate, priority){
+function createTodoEntry(title, description, dueDate, priority, id){
     const card = document.createElement('div');
     card.classList.add('todoContainer');
+    card.setAttribute('id', id);
     mainDiv.appendChild(card);
     
     const titleEntry = document.createElement('p');
@@ -54,28 +51,4 @@ function createTodoEntry2(title, description, dueDate, priority){
     card.appendChild(deleteButton);
 
 }
-
-
-function createTodoEntry(){
-    const entryCreation = document.createElement('div');
-    entryCreation.classList.add('todoContainer');
-    entryCreation.innerHTML=`
-        <p class = "todoTitle"></p>
-        <p class = "todoPriority"></p>
-        <p class = "todoDueDate"></p>
-        <p class = "todoDescription"></p>`
-    mainDiv.appendChild(entryCreation);
-}
-
-function fillToDoEntry(title, description, dueDate, priority){
-    const titleEntry = document.querySelector('.todoTitle');
-    titleEntry.textContent = title;
-    const priorityEntry = document.querySelector('.todoPriority');
-    priorityEntry.textContent = priority;
-    const dateEntry = document.querySelector('.todoDueDate');
-    dateEntry.textContent = dueDate;
-    const descriptionEntry = document.querySelector('.todoDescription');
-    descriptionEntry.textContent = description;
-}
-
 

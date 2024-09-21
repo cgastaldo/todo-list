@@ -1,10 +1,13 @@
 import "./styles.css";
 import createLayout from "./layout.js";
 import { returnProject } from "./project.js";
+import { deleteButtonFunctionality } from "./buttons.js";
+import { newEntryFunctionality } from "./buttons.js";
 
 createLayout();
 returnProject();
-
+deleteButtonFunctionality();
+newEntryFunctionality();
 
 /*
 
