@@ -177,18 +177,13 @@ body{
     color: black;
 }
 
-
-#modalBox{
-    position:fixed;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
 dialog{
     background-color: #0077b6;
     width:350px;
     height: 350px;
+    position: fixed;
+    top: 20%;
+    left: 35%;
 }
 
 form{
@@ -207,9 +202,4 @@ dialog button{
     color: black;
     margin-top: 10px;
     margin-right: 100px;
-}
-
-.modal-backdrop{
-    background-color: rgba(255,255,255, 0.5);
-    backdrop-filter:blur(10px);
 }
