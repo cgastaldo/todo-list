@@ -48,9 +48,10 @@ function createSidebar(){
     </div>
     <div class="sidebarLinks">
         <ul class = "sidebarList"> 
-            <li>Unique Project Name 1</li>
-            <li>Unique Project Name 2</li>
-            <li>Unique Project Name 3</li>
+            <li>Default Projects</li>
+            <li>Unique Project Name</li>
+            <li>Add Project</li>
+            <li>Not implementing</li>
         </ul>
     </div>
     <button class="newEntry">Create New Entry</button>`
